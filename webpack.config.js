@@ -20,6 +20,6 @@ module.exports = {
     }]
   },
   plugins: [
-    new ExtractTextPlugin('css/mystyles.css'),
+    new ExtractTextPlugin('css/style.css'),
   ]
 };
