@@ -4,7 +4,36 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 // 1. Your custom variables and variable overwrites.
-$global-link-color: #DA7D02;
+
+
+$primary-green: rgba(0, 177, 187, 1); //Green (turquoise)
+$primary-blue: rgba(66, 86, 121, 1); //Blue
+$primary-purple: rgba(239, 140, 141, 1); //Purple
+$primary-red: rgba(233, 102, 108, 1); // Red
+$primary-peach: rgba(238, 141, 121, 1); //Peach (burnt orange)
+$primary-orange: rgba(243, 150, 109, 1); //Orange 
+$grey: rgba(95, 95, 95, 1);  // dark grey
+
+// $global-emphasis-color: #333 !default;
+// $global-color: #666 !default;
+// $global-muted-color: #999 !default;
+// $global-inverse-color: #fff !default;
+
+// $global-muted-background: #f8f8f8 !default;
+$global-primary-background: $primary-green;
+$card-default-background: lighten($primary-green, 50%);
+$card-default-color: $grey;
+$card-default-border: 10px solid black;
+// $global-success-background: #32d296 !default;
+// $global-warning-background: #faa05a !default;
+// $global-danger-background: #f0506e !default;
+// $global-secondary-background: #222 !default;
+// $global-background: #fff !default;
+
+// $global-link-color: #1e87f0 !default;
+// $global-link-hover-color: #0f6ecd !default;
+
+$card-default-box-shadow: none;
 
 // 2. Import default variables and available mixins.
 @import "uikit/src/scss/variables-theme.scss";
@@ -15,3 +44,4 @@ $global-link-color: #DA7D02;
 
 // 4. Import UIkit.
 @import "uikit/src/scss/uikit-theme.scss";
+@import "custom.scss"
