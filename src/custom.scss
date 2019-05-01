@@ -1,3 +1,11 @@
 .uk-card-default {
-  border: 2px solid $primary-green
+  border: 2px solid $default-green;
+}
+
+.uk-card-primary {
+  border: 2px solid $primary-blue;
+}
+
+.uk-card-secondary {
+  border: 2px solid $secondary-purple;
 }

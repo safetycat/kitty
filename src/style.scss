@@ -6,41 +6,50 @@
 // 1. Your custom variables and variable overwrites.
 
 
-$primary-green: rgba(0, 177, 187, 1); //Green (turquoise)
+$default-green: rgba(0, 177, 187, 1); //Green (turquoise)
 $primary-blue: rgba(66, 86, 121, 1); //Blue
-$primary-purple: rgba(239, 140, 141, 1); //Purple
+$secondary-purple: rgba(239, 140, 141, 1); //Purple
 $primary-red: rgba(233, 102, 108, 1); // Red
 $primary-peach: rgba(238, 141, 121, 1); //Peach (burnt orange)
 $primary-orange: rgba(243, 150, 109, 1); //Orange 
 $grey: rgba(95, 95, 95, 1);  // dark grey
 
-// $global-emphasis-color: #333 !default;
-// $global-color: #666 !default;
-// $global-muted-color: #999 !default;
-// $global-inverse-color: #fff !default;
 
-// $global-muted-background: #f8f8f8 !default;
-$global-primary-background: $primary-green;
-$card-default-background: lighten($primary-green, 50%);
-$card-default-color: $grey;
-$card-default-border: 10px solid black;
-// $global-success-background: #32d296 !default;
-// $global-warning-background: #faa05a !default;
-// $global-danger-background: #f0506e !default;
-// $global-secondary-background: #222 !default;
-// $global-background: #fff !default;
+// global overrides
+$global-medium-box-shadow: none;
 
-// $global-link-color: #1e87f0 !default;
-// $global-link-hover-color: #0f6ecd !default;
+// overrides for default 
+$global-default-background : $default-green;
+$card-default-color        : $grey;
+$card-default-background   : lighten($default-green, 50%);
+$card-default-color-mode   : dark;
 
-$card-default-box-shadow: none;
+// overrides for primary 
+$global-primary-background : $primary-blue;
+$card-primary-color        : $grey;
+$card-primary-background   : lighten($primary-blue, 50%);
+$card-primary-color-mode   : dark;
+
+// overrides for secondary 
+$global-secondary-background : $secondary-purple;
+$card-secondary-color        : $grey;
+$card-secondary-background   : lighten($secondary-purple, 20%);
+$card-secondary-color-mode   : dark;
+
+
+
 
 // 2. Import default variables and available mixins.
 @import "uikit/src/scss/variables-theme.scss";
 @import "uikit/src/scss/mixins-theme.scss";
 
-// 3. Your custom mixin overwrites.
-@mixin hook-card() { color: #000; }
+// 3. Mixin stuff
+@mixin hook-card-header(){
+  color: $grey;
+}
+@mixin hook-card-footer(){
+  color: $grey;
+}
 
 // 4. Import UIkit.
 @import "uikit/src/scss/uikit-theme.scss";
